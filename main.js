@@ -21,10 +21,6 @@ function Book(title, author, pages, status) {
 
 function addBook(book) {
 
-
-
-
-    // myLibrary.push(book);
 }
 
 function deleteBook(book) {
