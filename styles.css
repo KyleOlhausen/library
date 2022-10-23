@@ -22,10 +22,11 @@ html, body, .container {
     background-color: rgb(230, 227, 227);
     display: flex;
     flex-wrap: wrap;
-    padding: 0 50px 0 50px;
+    padding: 20px 50px 20px 50px;
     justify-content: center;
     align-items: center;
     gap: 20px;
+
 }
 
 .input-section {
@@ -35,5 +36,30 @@ html, body, .container {
 
 button {
     height: 30px;
-    margin-top: 10px;
 }
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+table th,td {
+ border-bottom: 1px solid #d8d7d7;  
+ padding: 12px 15px;
+ text-align: left;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+
+ 
