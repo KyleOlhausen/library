@@ -1,45 +1,83 @@
 html, body, .container {
     height: 100%;
-    width: 100%;
     margin: 0;
 }
 
 .container {
     display: grid;
-    grid-template-rows: 1fr 2fr 8fr;
+    grid-template-rows: 1fr 1fr 8fr;
 }
 
 .header {
-    background-color: white;
+    background-color: burlywood;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.book-form-section {
-    background-color: rgb(235, 232, 232);
+.header h1 {
+    grid-column: 2/3;
+}
+
+.book-input {
+    background-color: rgb(230, 227, 227);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 50px 20px 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 
 }
 
-.book-form {
+.input-section {
     display: flex;
     flex-direction: column;
-
 }
 
 .content {
-    background-color: lightgray;
-}
-
-.books {
-    height: 100%;
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+    justify-content: center;
 }
 
-.book-card {
-    height: 200px;
-    width: 200px;
-    background-color: white;
-    border-radius: 10px;
-    padding: 30px;
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
+
+table th,td {
+ border-bottom: 1px solid #d8d7d7;  
+ padding: 12px 30px;
+ text-align: left;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+
+/* BUTTONS */
+button {
+    background-color: rgb(185, 185, 185);
+    height: 30px;
+    border-radius: 10px;
+    border: 1px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #a8a6a6;
+}
+
+ .btn-delete {
+    background-color: rgb(235, 113, 113);
+ }
+
+ .btn-delete:hover {
+    background-color: rgb(230, 61, 61);
+    cursor: pointer;
+ }
