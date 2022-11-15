@@ -3,7 +3,7 @@ let myLibrary = [
         title: "A Game of Thrones",
         author: "George R. R. Martin",
         pages: 694,
-        read: "read"
+        read: "not read"
     }
 ];
 
@@ -88,7 +88,7 @@ function displayBooks()
         $tPages.textContent = book.pages;
         $deleteBtn.textContent = "Delete";
 
-        if($read.value)
+        if(book.read == "read")
         {
             $readBtn.textContent = "Read";
         }
@@ -117,20 +117,29 @@ const $table = document.querySelector('table').addEventListener('click', e => {
     {
         deleteBook(e.target.dataset.bookTitle);
     }
-    //else if textContent = "Read/not read"
+    else if(e.target.textContent == "Read" || e.target.textContent == "Not read")
+    {
+        changeReadStatus(e.target.dataset.bookTitle);
+    }
+
+    displayBooks();
 });
 
 
 
 
-// function changeReadStatus() {
-//     if(.textContent === "Read"){
-//         .textContent = "Not Read";
-//     }
-//     else{
-//         .textContent = "Read";
-//     }
-// }
+function changeReadStatus(title) {
+    let bookIndex = findBook(title);
+    
+    if(myLibrary[bookIndex].read == "read")
+    {
+        myLibrary[bookIndex].read = "not read";
+    }
+    else
+    {
+        myLibrary[bookIndex].read = "read";
+    }
+}
 
 
 
@@ -151,7 +160,6 @@ function deleteBook(title)
     if (bookIndex === null || bookIndex === undefined) return;
 
     myLibrary.splice(bookIndex, 1);
-    displayBooks();
 }
 
 
