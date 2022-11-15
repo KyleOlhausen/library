@@ -54,15 +54,6 @@ function addBook()
 }
 
 
-
-
-
-
-
-//need to add a way to select a book
-//using i, add a class of i to each new element
-//to delete remove anything with i class
-//to change read status find i class and change the read btn.textContent
 function displayBooks() 
 {
     $tbody.textContent = "";
@@ -78,6 +69,8 @@ function displayBooks()
         let $tRead = document.createElement('td');
         let $deleteBtn = document.createElement('button');
         let $tDelete = document.createElement('td');
+
+        $deleteBtn.classList.add("btn-delete");
        
         //these are to find the title from btn.dataset.bookTitle
         $deleteBtn.dataset.bookTitle = book.title;
@@ -113,11 +106,12 @@ function displayBooks()
 
 
 const $table = document.querySelector('table').addEventListener('click', e => {
-    if(e.target.textContent == "Delete")
+    let btnText = e.target.textContent
+    if(btnText == "Delete")
     {
         deleteBook(e.target.dataset.bookTitle);
     }
-    else if(e.target.textContent == "Read" || e.target.textContent == "Not read")
+    else if(btnText == "Read" || btnText == "Not read")
     {
         changeReadStatus(e.target.dataset.bookTitle);
     }

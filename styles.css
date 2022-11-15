@@ -35,7 +35,15 @@ html, body, .container {
 }
 
 button {
+    background-color: rgb(185, 185, 185);
     height: 30px;
+    border-radius: 10px;
+    border: 1px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #a8a6a6;
 }
 
 .content {
@@ -63,4 +71,11 @@ td:last-child {
   padding-right: 0; }
 
 
- 
+ .btn-delete {
+    background-color: rgb(235, 113, 113);
+ }
+
+ .btn-delete:hover {
+    background-color: rgb(230, 61, 61);
+    cursor: pointer;
+ }
